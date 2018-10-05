@@ -1,0 +1,96 @@
+<div class="row">
+    <form class="col s12" [formGroup]="restaurantForm" novalidate>
+      <div class="row">
+        <div class="input-field col m6 offset-m3">
+            <input id="hotel_name" type="text" class="validate" formControlName="name" #name />
+            <label for="hotel_name">Brand Name</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="hotel_tagline" type="text" class="validate" formControlName="tagline" #price>
+            <label for="hotel_tagline">Tagline</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="hotel_id" type="text" class="validate" formControlName="code" #code>
+            <label for="hotel_id">Stall Code</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="hotel_address" type="text" class="validate" formControlName="address" #address>
+            <label for="hotel_address">Address</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="hotel_landmark" type="text" class="validate" formControlName="landmark" #landmark>
+            <label for="hotel_landmark">Landmark</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="street" type="text" class="validate" formControlName="street" #street>
+            <label for="street">Street</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="city" type="text" class="validate" formControlName="city" #city>
+            <label for="city">City</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="state" type="text" class="validate" formControlName="state" #state>
+            <label for="state">State</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="contact1" type="text" class="validate" formControlName="phone1" #phone1>
+            <label for="contact1">Phone 1</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <input id="contact2" type="text" class="validate" formControlName="phone2" #phone2>
+            <label for="contact2">Phone 2</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+          <textarea id="description" class="materialize-textarea" formControlName="description" #description>   
+          </textarea>
+          <label for="description">Description for your restaurant</label>
+        </div>
+        <div class="input-field col m6 offset-m3">
+            <button class="btn waves-effect waves-light" type="submit" (click)="addCoin(name.value, price.value)" [disabled]="restaurantForm.pristine || restaurantForm.invalid" >
+                Register Now
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+<!---  
+<div class="input-field col s6">
+    <input id="first_name" type="text" class="validate">
+    <label for="first_name">First Name</label>
+</div>
+<div class="input-field col s6">
+    <input id="last_name" type="text" class="validate">
+    <label for="last_name">Last Name</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+    <label for="disabled">Disabled</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+    <input id="password" type="password" class="validate">
+    <label for="password">Password</label>
+</div>
+</div>
+<div class="row">
+<div class="input-field col s12">
+    <input id="email" type="email" class="validate">
+    <label for="email">Email</label>
+</div>
+</div>
+<div class="row">
+<div class="col s12">
+    This is an inline input field:
+    <div class="input-field inline">
+    <input id="email_inline" type="email" class="validate">
+    <label for="email_inline">Email</label>
+    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+    </div>
+</div>
+--->
